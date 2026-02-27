@@ -2,6 +2,7 @@
 
 <p>How it works:</p>
 
+e.toml
 ```toml
 [user]
 name = {{ username }}
@@ -10,7 +11,11 @@ age = {{ user_age }}
 [greetings]
 msg = {{ "Hello" + username }}
 ```
+
+test.py
 ```python
+from tomlj2 import TomlProcessor
+
 def double(x):
     return x * 2
 
@@ -34,3 +39,8 @@ Returns:
   ]
 }
 ```
+
+## Notes
+- The Jinja environment is sandboxed, no builtin global/filters are allowed, only ones defined in `.tools` function.
+
+- Each block is processed individually (treated as a seperate toml file). This is intentional for use in a future project im working on 

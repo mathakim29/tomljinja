@@ -261,7 +261,7 @@ wheels = [
 ]
 
 [[package]]
-name = "tomljinja"
+name = "tomljinja2"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

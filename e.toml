@@ -1,0 +1,6 @@
+[user]
+name = {{ username }}
+age = {{ user_age }}
+
+[greetings]
+msg = {{ "Hello" + username }}

@@ -14,6 +14,7 @@ class TomlProcessor:
             undefined=StrictUndefined,
         )
         self.env.globals.clear()
+        self.env.filters.clear()
         self.only_expression = regex.compile(r"\{\{.*?\}\}", regex.DOTALL)
         self.any_jinja = regex.compile(
             r"(\{\{.*?\}\}|\{%.*?%\}|\{#.*?#\})", regex.DOTALL
